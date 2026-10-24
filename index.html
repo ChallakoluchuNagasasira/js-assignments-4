@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Assignments 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">JavaScript Practice</p>
+    <h1>JavaScript Assignments 4</h1>
+    <p>Live input validation, subscription plans, and a profile card builder.</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <div class="section-heading">
+        <span class="task-number">Task 1</span>
+        <div><h2>Live Input &amp; Character Guard</h2><p>See character count and password feedback instantly.</p></div>
+      </div>
+      <form id="user-form">
+        <div class="field">
+          <label for="username">Username (Max 12 chars)</label>
+          <input type="text" id="username" placeholder="Enter username">
+          <small id="char-count">0 / 12</small>
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="At least 6 characters">
+          <p id="password-error" class="error" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <span class="task-number">Task 2</span>
+        <div><h2>Subscription Plan Selector</h2><p>Choose a plan and accept the terms to submit.</p></div>
+      </div>
+      <form id="sub-form">
+        <div class="field">
+          <label for="plan-select">Choose Plan</label>
+          <select id="plan-select">
+            <option value="free">Free - $0</option>
+            <option value="pro">Pro - $15/mo</option>
+            <option value="enterprise">Enterprise - $50/mo</option>
+          </select>
+        </div>
+        <p id="plan-details" class="info">Selected: Free Plan ($0)</p>
+        <label class="checkbox-row" for="terms-check">
+          <input type="checkbox" id="terms-check"> I accept the terms
+        </label>
+        <p id="form-error" class="error" aria-live="polite"></p>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <span class="task-number">Task 3</span>
+        <div><h2>Registration &amp; Profile Card Builder</h2><p>Validate the form and create a profile card.</p></div>
+      </div>
+      <form id="register-form" novalidate>
+        <div class="field">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Full Name">
+          <small id="name-err" class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="pass">Password</label>
+          <input type="password" id="pass" placeholder="Password">
+        </div>
+        <div class="field">
+          <label for="confirm-pass">Confirm Password</label>
+          <input type="password" id="confirm-pass" placeholder="Confirm Password">
+          <small id="pass-err" class="error" aria-live="polite"></small>
+        </div>
+        <div class="field">
+          <label for="role-select">Role</label>
+          <select id="role-select">
+            <option value="">Select Role</option>
+            <option value="Developer">Developer</option>
+            <option value="Designer">Designer</option>
+          </select>
+          <small id="role-err" class="error" aria-live="polite"></small>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <h3 class="result-title">Registered Profile</h3>
+      <div id="profile-display" class="profile-grid"></div>
+    </section>
+  </main>
+  <footer>Built with HTML, CSS and JavaScript</footer>
+  <script src="script.js"></script>
+</body>
+</html>
